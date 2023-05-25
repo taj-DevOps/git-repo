@@ -3,11 +3,15 @@ name: Hello-world wokflow
 on: 
   push:
     branches: 
-      - feature/tajuddin
+      - feature/hello-world
 
 jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - name: Echo Hello-world
-        run: echo "Hello-world!"
+        run: echo "welcome to Hello-world!"
