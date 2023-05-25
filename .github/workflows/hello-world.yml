@@ -1,0 +1,13 @@
+name: Hello-world wokflow
+
+on: 
+  push:
+    branches: 
+      - feature/tajuddin
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello-world
+        run: echo "Hello-world!"
